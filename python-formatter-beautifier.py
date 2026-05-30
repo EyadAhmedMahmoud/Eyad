@@ -1,16 +1,3 @@
-"""
-Adventure Game - A text-based RPG adventure
-
-HOW TO RUN:
-1. Make sure you have Python 3 installed
-2. Open a terminal/command prompt
-3. Navigate to this file's directory
-4. Run: python python-formatter-beautifier.py
-5. Follow the on-screen prompts to play!
-
-REQUIREMENTS:
-- Python 3.x (no additional packages needed)
-"""
 
 import time
 import random
