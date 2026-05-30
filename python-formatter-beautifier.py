@@ -1,5 +1,20 @@
+"""
+Adventure Game - A text-based RPG adventure
+
+HOW TO RUN:
+1. Make sure you have Python 3 installed
+2. Open a terminal/command prompt
+3. Navigate to this file's directory
+4. Run: python python-formatter-beautifier.py
+5. Follow the on-screen prompts to play!
+
+REQUIREMENTS:
+- Python 3.x (no additional packages needed)
+"""
+
 import time
 import random
+
 
 def main():
     total_score = 0
@@ -51,7 +66,7 @@ def main():
     time.sleep(2)
     print("Rumor has it that a wicked fairie is somewhere around here.")
     time.sleep(2)
-    print(" has been terrifying the nearby village.")
+    print("It has been terrifying the nearby village.")
     time.sleep(2)
     print("You must find the fairie and defeat it to save the village.")
     time.sleep(2)
@@ -75,10 +90,10 @@ def main():
     while True:
         choice2 = input("Enter \"house\", \"cave\", or \"field\": ").lower()
         if choice2 == "house":
-            handle_house(total_score, weapon)
+            total_score = handle_house(total_score, weapon)
             break
         elif choice2 == "cave":
-            handle_cave(total_score)
+            total_score = handle_cave(total_score)
             break
         elif choice2 == "field":
             print("You wander around the field aimlessly.")
@@ -126,7 +141,7 @@ def handle_house(total_score, weapon):
             while True:
                 choice4 = input("Enter \"fight\" to fight the fairie, or \"run\" to escape: ").lower()
                 if choice4 == "fight":
-                    fight_fairie(total_score, weapon)
+                    total_score = fight_fairie(total_score, weapon)
                     break
                 elif choice4 == "run":
                     print("You run back outside and escape safely.")
@@ -145,6 +160,8 @@ def handle_house(total_score, weapon):
         else:
             print("Invalid choice. Please try again.")
 
+    return total_score
+
 
 def handle_cave(total_score):
     print("You cautiously enter the dark cave.")
@@ -159,6 +176,8 @@ def handle_cave(total_score):
     time.sleep(2)
 
     print("You leave the cave and return to the field.")
+    
+    return total_score
 
 
 def fight_fairie(total_score, weapon):
@@ -183,6 +202,8 @@ def fight_fairie(total_score, weapon):
             total_score -= 20
             time.sleep(2)
             print("Game over.")
+    
+    return total_score
 
 
 if __name__ == "__main__":
