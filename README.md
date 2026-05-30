@@ -1,2 +1,2 @@
-# calc
-- Using HTMl , Css and Js
+# Adventure game
+- Using Python
